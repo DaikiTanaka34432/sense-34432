@@ -50,6 +50,18 @@
   font-weight: bold;
 }
 
+.select-box{
+  height: 30px;
+  width: 80%;
+}
+
+.indispensable{
+  background-color:#e9ec09;
+  border: 1px solid #e9ec09;
+  padding: 2px;
+  border-radius: 4px;
+}
+
 .input-default {
   width: 100%;
   margin-top: 5px;
@@ -141,6 +153,7 @@
 .register-btn {
   width: 50%;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 .register-yellow-btn {
