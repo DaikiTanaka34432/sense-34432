@@ -1,0 +1,11 @@
+
+ユーザー名：<%= @user.nickname %> さん
+
+<h2>プロフィール</h2>
+<%= @user.introduction%>
+
+<% if @user.user_check_id != 1 %>
+お気に入り商品一覧
+<% else %>
+出品商品一覧
+<% end %>
