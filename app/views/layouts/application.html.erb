@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Sense34432</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<head>
-  <title>Sense-34432</title>
-  <link rel="icon" href="/favicon.ico" />
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
-  <%= stylesheet_link_tag 'application', media: 'all'%>
-</head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<body>
-  <%= yield %>
-  <%= javascript_pack_tag 'application' %>
-</body>
-
+  <body>
+    <%= yield %>
+  </body>
 </html>
