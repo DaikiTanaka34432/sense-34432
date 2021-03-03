@@ -2,16 +2,17 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: rgb(232, 250, 249);
   display: flex;
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
+/* form-wrapは商品購入画面でも使用 */
 .form-wrap {
-  width: 50%;
+  width: 60%;
   background-color: white;
   padding-bottom: 70px;
+  border-radius: 40px;
 }
 
 .form-header {
@@ -28,7 +29,7 @@
 }
 
 .form-group {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -47,6 +48,18 @@
 .form-text {
   font-size: 14px;
   font-weight: bold;
+}
+
+.select-box{
+  height: 30px;
+  width: 80%;
+}
+
+.indispensable{
+  background-color:#e9ec09;
+  border: 1px solid #e9ec09;
+  padding: 2px;
+  border-radius: 4px;
 }
 
 .input-default {
@@ -133,28 +146,43 @@
 }
 
 .form-bottom-text>span {
-  color: #0099e8;
+  color: rgb(1, 48, 255);
   cursor: pointer;
 }
 
 .register-btn {
   width: 50%;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
-.register-red-btn {
+.register-yellow-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
+  background: #e9ec09;
+  border: 1px solid #e9ec09;
+  border-radius: 10px;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .register-info {
   margin: 30px 180px 0 0;
-  color: #0099e8;
+  color:  rgb(1, 48, 255);
   text-align: right;
   cursor: pointer;
+}
+
+.intro-text {
+  width: 100%;
+  height: 200px;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: none;
+}
+
+.hidden{
+  display: none;
 }

@@ -1,0 +1,40 @@
+.separate{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.side-profile{
+  width: 28%;
+  background-color: rgb(232, 250, 249);
+}
+
+.user-nickname{
+  
+}
+
+h2{
+  font-weight: bold;
+}
+
+.user-introduction{
+  width: 78%;
+  margin: 15px auto;
+  border: 2px solid black;
+}
+
+.items-area{
+  width: 78%;
+  background-color:rgb(161, 252, 247);
+}
+
+.user-items > p{
+  text-align: center;
+}
+
+.test{
+  height: 800px;
+  width: 600px;
+  margin: 40px auto;
+  background-color: gray;
+  text-align: center;
+}
