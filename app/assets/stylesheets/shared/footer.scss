@@ -3,10 +3,10 @@
 
 .ad-footer-contents {
   width: 100vw;
-  background-image: image-url('furima-footer.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-image: image-url('nissya.png');
+  background-size: 50%;
+  background-repeat: repeat-x;
+  background-position: left;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,7 @@
   width: 100vw;
   padding: 3vh 0;
   color: #FFF;
-  background-color: #272727;
+  background-color: #00a48d;
   text-align: center;
 }
 
@@ -63,6 +63,12 @@
   vertical-align: bottom;
 }
 
+.footer-logo{
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+}
 .footer>p {
   font-size: 14px;
 }
