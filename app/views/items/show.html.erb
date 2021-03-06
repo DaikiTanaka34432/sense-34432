@@ -57,19 +57,25 @@
           </div>
         </div>
       </div>
-      <div class="users-button">
-        <% if @item.present? %>
-          <% if current_user.id == @item.user_id%>
-            <%= link_to "編集", edit_item_path, method: :get, class: "item-red-btn" %>
-            <p class="or-text">or</p>
-            <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+      <div class="buttons">
+        <div class="users-button">
+          <% if @item.present? %>
+            <% if user_signed_in?%>
+              <% if current_user.id == @item.user_id%>
+                <%= link_to "編集", edit_item_path, method: :get, class: "item-btn" %>
+                <p class="or-text">or</p>
+                <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+              <% else %>
+                <%# 商品が売れていない時 %>
+                <%= link_to "購入画面に進む", "#" ,class:"item-btn"%>
+                <%# //商品が売れていない時%>
+              <% end %>
+            <% end %>
           <% end %>
-          <%# 商品が売れていない場合はこちらを表示しましょう %>
-          <% if user_signed_in? && current_user.id != @item.user_id %>
-            <%= link_to "購入画面に進む", "#" ,class:"item-red-btn"%>
-          <% end %>
-          <%# //商品が売れていない場合はこちらを表示しましょう %>
-        <% end %>
+        </div>
+        <div class="return-btn">
+          <%= link_to "一覧へ戻る", root_path ,class:"item-btn"%>
+        </div>
       </div>
    </div>
   <%# /商品の概要 %>
