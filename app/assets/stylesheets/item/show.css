@@ -18,6 +18,11 @@
   margin-bottom: 5px;
 }
 
+.item-box-img{
+  width: 35vw;
+  height: 55vh;
+}
+
 .item-about{
  width: 40vw;
  margin-top: 5vh;
