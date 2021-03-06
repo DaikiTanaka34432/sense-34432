@@ -77,16 +77,19 @@
 
 
 .item-lists{
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 20px 0;
+  overflow: scroll;
 }
 
 .item-lists >.list{
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;
+  margin: 10px 5px;
 }
 
 .item-talent{
@@ -97,8 +100,6 @@
 .item-talent-name{
   text-decoration: none;
 }
-
-
 
 .item-img{
   width: 33vh;

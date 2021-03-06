@@ -5,36 +5,60 @@
 
 .side-profile{
   width: 28%;
+  height: 100vh;
+  padding: 10px;
   background-color: rgb(232, 250, 249);
+  overflow: scroll;
 }
 
 .user-nickname{
-  
+  font-size: 20px;
+  margin-bottom:5px;
 }
 
 h2{
   font-weight: bold;
+  margin-bottom:5px;
+}
+
+.talent-office{
+  margin-bottom:5px;
+}
+
+.talent-career{
+  margin-bottom:5px;
 }
 
 .user-introduction{
-  width: 78%;
-  margin: 15px auto;
-  border: 2px solid black;
+  margin: 15px 0;
+  width: 94%;
+  height: 80%;
+  border: 1px solid #333;
+}
+
+.profile-edit-button{
+  width: 94%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.user-edit{
+  text-decoration: none;
 }
 
 .items-area{
   width: 78%;
-  background-color:rgb(161, 252, 247);
+  height: 100vh;
+  overflow: scroll;
 }
 
 .user-items > p{
   text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.test{
-  height: 800px;
-  width: 600px;
-  margin: 40px auto;
-  background-color: gray;
-  text-align: center;
+.item-img{
+  border: 1px solid #333;
 }
