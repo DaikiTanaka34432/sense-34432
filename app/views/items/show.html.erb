@@ -58,21 +58,21 @@
         </div>
       </div>
       <div class="buttons">
-        <div class="users-button">
+        
           <% if @item.present? %>
             <% if user_signed_in?%>
+              <div class="users-button">
               <% if current_user.id == @item.user_id%>
-                <%= link_to "編集", edit_item_path, method: :get, class: "item-btn" %>
-                <p class="or-text">or</p>
-                <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+                <p> <%= link_to "商品編集", edit_item_path, method: :get, class: "item-btn" %></p>
+                <p><%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %></P>
               <% else %>
                 <%# 商品が売れていない時 %>
                 <%= link_to "購入画面に進む", "#" ,class:"item-btn"%>
                 <%# //商品が売れていない時%>
               <% end %>
+              </div>
             <% end %>
           <% end %>
-        </div>
         <div class="return-btn">
           <%= link_to "一覧へ戻る", root_path ,class:"item-btn"%>
         </div>

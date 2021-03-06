@@ -72,6 +72,10 @@
 }
 
 .users-button{
+  display:flex;
+}
+
+.users-button>p{
   margin: auto 2vw;
   padding: 1vh 1vw;
   font-size: 30px;
@@ -90,5 +94,9 @@
 }
 
 .item-btn{
+  text-decoration: none;
+}
+
+.item-destroy{
   text-decoration: none;
 }
