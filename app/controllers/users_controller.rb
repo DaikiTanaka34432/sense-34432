@@ -5,13 +5,14 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user =User.find(current_user.id)
+    @user =User.find(params[:id])
   end
 
   def update
-    @user =User.find(current_user.id)
+    @user =User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(current_user.id)
+      bypass_sign_in(@user)  
+      redirect_to user_path(params[:id])
     else
       render :edit 
     end
@@ -19,6 +20,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :telephone, :office, :career, :introduction)
+    params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :telephone, :office_id, :career, :introduction)
   end
 end

@@ -18,6 +18,11 @@
   margin-bottom: 5px;
 }
 
+.item-box-img{
+  width: 35vw;
+  height: 55vh;
+}
+
 .item-about{
  width: 40vw;
  margin-top: 5vh;
@@ -60,15 +65,30 @@
   margin: 2vh 0;
 }
 
+.buttons{
+  width: 40%;
+  display:flex;
+  justify-content: space-between;
+}
+
 .users-button{
-  display: flex;
-  text-align: start;
-  margin: auto 0;
-  margin-left: 8vw; 
-  padding: 5vh 3vw;
+  margin: auto 2vw;
+  padding: 1vh 1vw;
   font-size: 30px;
   font-weight: bold;
   background: rgb(250, 250, 5); 
   border-radius: 5%;
   text-shadow: 2px 2px rgb(197, 194, 194);
+}
+
+.return-btn{
+  margin: auto 0;
+  padding: 1vh 1vw;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 5%;
+}
+
+.item-btn{
+  text-decoration: none;
 }
