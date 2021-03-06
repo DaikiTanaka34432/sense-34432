@@ -21,6 +21,8 @@ class User < ApplicationRecord
   end
  
   # Associations
+  has_many :items
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user_check
   belongs_to :office

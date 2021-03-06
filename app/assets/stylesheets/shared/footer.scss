@@ -1,32 +1,5 @@
-/* 下部広告部分 */
 /* items/index.htmlの広告cssを所々使いまわしています。 */
 
-.ad-footer-contents {
-  width: 100vw;
-  background-image: image-url('nissya.png');
-  background-size: 50%;
-  background-repeat: repeat-x;
-  background-position: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-
-.ad-footer-title {
-  font-size: 4vh;
-  margin-bottom: 2vh;
-}
-
-.ad-footer-explain {
-  font-size: 3vh;
-  line-height: 30px;
-}
-
-/* //下部広告部分 */
 
 .footer {
   width: 100vw;
