@@ -1,0 +1,95 @@
+.transaction-contents{
+  width: 100vw;
+  background-color: rgb(232, 250, 249);
+  display: flex;
+  justify-content: center;
+}
+
+.transaction-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 10vw;
+}
+
+/* 購入商品情報 */
+.transaction-title-text{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.buy-item-info{
+text-align: end;
+}
+
+.buy-item-img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.buy-item-text{
+  margin: 15px 2px;
+}
+
+.buy-item-price>p{
+  margin: 15px 2px;
+}
+
+.item-price-text{
+  border-bottom: 1px solid #333;  
+}
+
+.item-payment{
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 2px;
+  font-size: 20px;
+}
+
+.item-pay-title{
+  margin-right: 5px;
+}
+/* 購入商品情報 */
+
+/* カード情報 */
+.credit-info{
+  font-size: 20px;
+  margin: 15px auto;
+  font-weight: bold;
+}
+
+.card-form{
+  text-align: center;
+  margin: 20px auto;
+}
+
+.form-wrap{
+  margin: 0 auto;
+  text-align: start;
+}
+
+/* カード情報 */
+
+.customer-add{
+  font-size: 20px;
+  margin: 15px auto;
+  font-weight: bold;
+}
+
+.field{
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.pre-select-box{
+  height: 30px;
+  width: 38%;
+}
+
+.add-field{
+  width: 50%;
+}

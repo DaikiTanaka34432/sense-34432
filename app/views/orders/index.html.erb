@@ -1,24 +1,87 @@
-<%= form_with model:@order, id:'charge-form', class:'card-form', local: true do |f| %>
-  <div class='form-wrap'>
-    <%= f.label :fee, '金額'%>
-    <%= f.text_field :fee, class:'fee', placeholder:'例）2000'%>
+<%= render 'shared/error_messages', model: @order_address %>
+
+<div class='transaction-contents'>
+  <div class='transaction-main'>
+    <h1 class='transaction-title-text'>購入内容の確認 </h1>
+      <%# 購入内容の表示 %>
+      <div class='buy-item-info'>
+        <%= image_tag @item.image, class: 'buy-item-img' %>
+        <div class='buy-item-content'>
+          <h2 class='buy-item-text'>
+            <%= @item.name %>
+          </h2>
+          <div class='buy-item-price'>
+            <p class='item-price-sub-text'>配送料： <%= @item.delivery_fee.name %></p>
+            <p class='item-price-text'>購入金額： ¥<%= @item.fee %>円</p>
+          </div>
+        </div>
+        <div class='item-payment'>
+          <h1 class='item-pay-title'>
+            合計支払金額：
+          </h1>
+          <% if @item.delivery_fee.id == 1%>
+            <p class='item-payment-price'>
+              ¥<%= @item.fee + 700 %>円
+            </p>
+          <% else %>
+            <p class='item-payment-price'>
+              ¥<%= @item.fee %>円
+            </p>
+          <% end %>
+        </div>
+      </div>
+      <%# /購入内容の表示 %>
+
+    <%= form_with model:@order_address, url: item_orders_path, id:'charge-form', class:'card-form', local: true do |f| %>
+      <%# /クレカ情報 %>
+      <h1 class='credit-info'>クレジットカード情報</h1>
+      <div class='form-wrap'>
+        <%= f.label :number,  "カード番号" %>
+        <%= f.text_field :number, class:"number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+      </div>
+      <div class='form-wrap'>
+        <%= f.label :cvc ,"ＣＶＣ" %>
+        <%= f.text_field :cvc, class:"cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+      </div>
+      <div class='form-wrap'>
+        <p>有効期限</p>
+        <div class='input-expiration-date-wrap'>
+          <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>
+          <p>月</p>
+          <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>
+          <p>年</p>
+        </div>
+      </div>
+      <%# /クレカ情報 %>
+      <%# 配送先情報 %>
+      <h1 class='customer-add'>配送先住所</h1>
+      <div class="field">
+      <%= f.label :postal_code, "郵便番号（ハイフンを含む）" %>
+      <%= f.text_field :postal_code %>
+      </div>
+      <div class="field">
+        <%= f.label :prefecture_id, "都道府県" %>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"pre-select-box", id:"item-prefecture"}) %>
+      </div>
+      <div class="field">
+        <%= f.label :city, "市町村（必須）" %>
+        <%= f.text_field :city,  class:'add-field' %>
+      </div>
+      <div class="field">
+        <%= f.label :house_number, "番地（必須）" %>
+        <%= f.text_field :house_number, class:'add-field' %>
+      </div>
+      <div class="field">
+        <%= f.label :house_name, "建物名（任意）" %>
+        <%= f.text_field :house_name, class:'add-field' %>
+      </div>
+      <div class="field">
+        <%= f.label :telephone, "電話番号（必須）" %>
+        <%= f.text_field :telephone %>
+      </div>
+      <%# /配送先情報 %>
+      <%= f.submit "購入", class:"button"%>
+    <% end %>
   </div>
-   <div class='form-wrap'>
-    <%= f.label :number,  "カード番号" %>
-    <%= f.text_field :number, class:"number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
-  </div>
-  <div class='form-wrap'>
-    <%= f.label :cvc ,"ＣＶＣ" %>
-    <%= f.text_field :cvc, class:"cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
-  </div>
-  <div class='form-wrap'>
-    <p>有効期限</p>
-    <div class='input-expiration-date-wrap'>
-      <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>
-      <p>月</p>
-      <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>
-      <p>年</p>
-    </div>
-  </div>
-  <%= f.submit "購入", class:"button"%>
-<% end %>
+</div>
+<%= render "shared/second-footer"%>

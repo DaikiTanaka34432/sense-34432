@@ -55,7 +55,7 @@
                 <%#= image_tag image, class: "images" %>
               <%# end %>
 
-              <% if item.nil? %>
+              <% if item.order.present? %>
                 <div class='sold-out'>
                   <span>Sold Out!!</span>
                 </div>
