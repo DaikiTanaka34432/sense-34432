@@ -67,7 +67,7 @@
                   <p><%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %></P>
                 <% else %>
                   <%# 商品が売れていない時 %>
-                  <p><%= link_to "購入画面に進む", orders_path ,class:"item-btn"%></P>
+                  <p><%= link_to "購入画面に進む", item_orders_path(@item.id), method: :get,  class:"item-btn"%></P>
                   <%# //商品が売れていない時%>
                 <% end %>
               </div>

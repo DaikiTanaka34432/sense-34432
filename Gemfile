@@ -63,8 +63,4 @@ gem 'mini_magick'
 gem 'image_processing', '~>1.2'
 gem 'active_hash'
 gem 'happybirthday', '~> 1.0'
-<<<<<<< Updated upstream
 gem 'payjp'
-=======
-gem 'rails-i18n'
->>>>>>> Stashed changes

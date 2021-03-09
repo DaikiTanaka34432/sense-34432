@@ -22,6 +22,7 @@ class User < ApplicationRecord
  
   # Associations
   has_many :items
+  has_many :orders
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user_check
