@@ -101,6 +101,10 @@
   text-decoration: none;
 }
 
+.item-img-content{
+  position:relative;
+}
+
 .item-img{
   width: 33vh;
   height: 33vh;
@@ -131,6 +135,17 @@ margin:5px 0;
 }
 .star-icon{
   height: 5vh;
+}
+
+.sold-out{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  padding: 3% 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: yellow;
 }
 
 
