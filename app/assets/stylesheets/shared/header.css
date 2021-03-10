@@ -25,28 +25,30 @@ img.sense-icon {
 }
 
 .search-form {
-  width: 65vw;
+  width: 40vw;
   height: 5vh;
   display: flex;
   margin-bottom: 5px;
 }
 
-.search-form>.input-box {
+.input-box {
   width: 100%;
-  height: 5vh;
-  padding-left: 10px;
+  height: 7vh;
+  padding: 10px;
+  margin-bottom: 3px;
+  border-radius: 2%;
 }
 
 .search-button {
-  width: 5vh;
-  border: 0;
+  width: 5vw;
+  height: 7vh;
   cursor: pointer;
   background-color: rgb(250, 250, 5);
-  padding: 8px;
+  border-radius: 10%;
 }
 
 .search-icon {
-  width: 100%;
+  width: 5vh;
 }
 
 .nav {

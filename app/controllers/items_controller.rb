@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :show]
+  before_action :authenticate_user!, except:[:index, :show, :search]
   before_action :set_new, only:[:new]
   before_action :set_item, only:[:show, :edit, :update, :destroy]
   before_action :set_edit, only:[:edit, :update, :destroy]
@@ -39,6 +39,10 @@ class ItemsController < ApplicationController
     if @item.destroy
       redirect_to user_path(current_user.id)
     end
+  end
+
+  def search
+    @items = Item.search(params[:item][:keyword])
   end
 
   private

@@ -24,6 +24,14 @@ class Item < ApplicationRecord
   has_one :order
   has_one_attached :image
 
+  def self.search(search)
+    if search !=  ""
+      Item.where("name LIKE(?) OR profile LIKE(?)", "%#{search}%", "%#{search}%").order("created_at DESC") 
+    else
+      Item.none
+    end
+  end
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :delivery_fee

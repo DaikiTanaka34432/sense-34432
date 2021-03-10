@@ -1,0 +1,61 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+<%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>
+<% if user_signed_in? && current_user.user_check_id == 1 %>
+  <%= link_to(new_item_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>出品する</span>
+  <% end %>
+<% end %>
+<%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>
+
+  <%# 検索結果 %>
+  <div class='item-contents'>
+    <h2 class='title'>検索結果</h2>
+    <ul class='item-lists'>
+      <% if @items.length !=0 %>
+        <% @items.each do |item| %>
+          <li class='list'>
+            <div class="item-talent">
+              <%= link_to item.user.nickname, user_path(item.user.id), method: :get, class:"item-talent-name" %>
+            </div>
+            <%= link_to item_path(item.id), method: :get do %>
+              <div class='item-img-content'>
+                <%= image_tag item.image, class: "item-img" %>
+
+                <% if item.order.present? %>
+                  <div class='sold-out'>
+                    <span>Sold Out!!</span>
+                  </div>
+                <% end %>
+              </div>
+            <% end %> 
+            <div class="item-footer">
+                <h3 class='item-name'>
+                  <%= item.name %>
+                </h3>
+              <div class='star-money'>
+                <div class='item-price'>
+                  <span>¥ <%= item.fee %>円</span>
+                </div>
+                <div class='star-btn'>
+                  <%= image_tag "star.png", class:"star-icon" %>
+                  <span class='star-count'>0</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        <% end %> 
+      <% else %>
+        <%# 商品がない時のみ表示 %>
+        <h3 class='item-name'>
+          商品がありません。
+        </h3>
+        <%# 商品がない時のみ表示 %>
+      <% end %>
+    </ul>
+  </div>
+  <%# /検索結果 %>
+</div>
+
+<%= render "shared/footer" %>
