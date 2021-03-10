@@ -73,6 +73,12 @@
 .item-contents>.subtitle{
   font-size: 30px;
   margin: 15px 0;
+  animation: flash 1.5s linear infinite;
+}
+
+@keyframes flash {
+  0%,100% {opacity: 1;}
+  50% {opacity: 0;}
 }
 
 
