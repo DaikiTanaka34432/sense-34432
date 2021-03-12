@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/user_header" %>
 
 <%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>
 <% if user_signed_in? && current_user.user_check_id == 1 %>
@@ -14,12 +14,14 @@
       <%= @user.nickname %> さん
     </div>
     <h2>＜プロフィール＞</h2>
+    <% if current_user.user_check_id == 1 %>
       <div class="talent-office">
         <%= @user.office.name%> 所属
       </div>
         <div class="talent-career">
         <%= @user.career%>結成（本当は〜年目と表示したい）
       </div>
+    <% end %>
       <div class="user-introduction">
         <%= @user.introduction%>
       </div>
