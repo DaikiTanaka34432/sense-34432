@@ -5,54 +5,15 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 10vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #00a48d;
 }
 
-.search-bar-contents {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-img.sense-icon {
-  height:50px;
-  width: 50px;
-  margin-right: 5vw;
-  border-radius: 50%;
-}
-
-.search-form {
-  width: 40vw;
-  height: 5vh;
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.input-box {
-  width: 100%;
-  height: 7vh;
-  padding: 10px;
-  margin-bottom: 3px;
-  border-radius: 2%;
-}
-
-.search-button {
-  width: 5vw;
-  height: 7vh;
-  cursor: pointer;
-  background-color: rgb(250, 250, 5);
-  border-radius: 10%;
-}
-
-.search-icon {
-  width: 5vh;
-}
-
 .nav {
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -61,28 +22,89 @@ img.sense-icon {
 }
 
 .lists-left {
-  display: flex;
   min-width: 200px;
+}
 
+.item_search{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.select-categories{
+  display: flex;
+}
+
+.select-category{
+  margin-right:24px;
+}
+
+.label-names{
+  margin-left: 2%;
+}
+
+.search-field{
+  height: 11%;
+  border: none;
+}
+
+.collection-field{
+  height: 30px;    
 }
 
 .category-list {
   text-decoration: none;
-  margin-right: 3vw;
   color: #333333;
 }
 
-.brand-list {
+.office-list {
   text-decoration: none;
   color: #333333;
 }
 
-.lists-right {
-  display: flex;
-  list-style: none;
-  align-items: flex-end;
+.search-buttons{
+
 }
 
+.search-button {
+  padding: 7px;
+  cursor: pointer;
+  background-color: rgb(250, 250, 5);
+  border-radius: 5%;
+  border: none;
+  box-shadow: 3px 3px gray;
+  margin-right:12px;
+}
+
+.reset-button{
+  padding: 7px;
+  width: 5vw;
+  height: 7vh;
+  cursor: pointer;
+  background-color: rgb(255, 255, 251);
+  border-radius: 5%;
+  border: none;
+  text-decoration: none;
+  box-shadow: 3px 3px gray;
+}
+
+
+.lists-right {
+  list-style: none;
+}
+
+.header-icon{
+  text-align: center;
+}
+
+.header-logo{
+  width: 8vw;
+}
+
+.login-status{
+  display: flex;
+}
 
 .user-nickname {
   text-decoration: none;
@@ -99,7 +121,6 @@ img.sense-icon {
 
 .login {
   text-decoration: none;
-  line-height: 32px;
   margin-right: 3vw;
   color: #333333;
 }

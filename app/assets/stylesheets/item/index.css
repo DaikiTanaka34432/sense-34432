@@ -21,14 +21,13 @@
 }
 
 .feature-contents {
-  padding: 5vh 10vw;
   text-align: center;
   display: block;
 }
 
 .feature-pict{
-  padding: 20px 30px;
-  width: 100%;
+  padding: 30px;
+  width: 80%;
   position: relative;
   -ms-filter: blur(3px);
   filter: blur(3px);
@@ -36,7 +35,7 @@
 
 .feature-words{
   position: absolute;
-  top: 250px;
+  top: 400px;
   left: 205px;
 }
 

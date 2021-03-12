@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_new, only:[:new]
   before_action :set_item, only:[:show, :edit, :update, :destroy]
   before_action :set_edit, only:[:edit, :update, :destroy]
+  before_action :set_search, only:[:index, :show, :search]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -42,7 +43,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:item][:keyword])
+    @items= @search.result.order("created_at DESC")
   end
 
   private
@@ -70,4 +71,8 @@ class ItemsController < ApplicationController
     end
   end
 
+  def set_search
+    @search = Item.ransack(params[:q])
+  end
+ 
 end
