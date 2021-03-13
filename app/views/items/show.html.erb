@@ -50,11 +50,21 @@
             <p>¥<%= @item.fee %>円(税込)</p>
           </span>
         </div>
-        <div class="option">
-          <div class="favorite-btn">
-            <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"18",height:"18"%>
-            <span>お気に入り 0</span>
-          </div>
+        <div class="heart-click">
+          <% if current_user.liked_by?(@item) %>
+            <p class="heart-icon">
+              <%= link_to item_likes_path(@item), method: :delete  do%>
+              <i class="fas fa-heart"></i>
+              <% end %>
+            </p>
+          <%else%>
+            <p class="heart-icon">
+              <%= link_to item_likes_path(@item), method: :post  do%>
+                <i class="far fa-heart"></i>
+              <% end %>
+            </p>
+          <% end %>
+          <%= @item.likes.count%>
         </div>
       </div>
       <div class="buttons">

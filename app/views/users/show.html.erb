@@ -38,7 +38,7 @@
         <p>お気に入り商品一覧</p>
       <% else %>
         <p>出品商品一覧</p>
-          <ul class='item-lists'>
+        <ul class='item-lists'>
           <% @items.each do |item| %>
             <li class='list'>
               <%= link_to item_path(item.id), method: :get do %>
@@ -61,27 +61,26 @@
                   <div class='item-price'>
                     <span>¥ <%= item.fee %>円</span>
                   </div>
-                  <div class='star-btn'>
-                    <%= image_tag "star.png", class:"star-icon" %>
-                    <span class='star-count'>0</span>
+                  <div class="heart-click">
+                    <% if current_user.liked_by?(item) %>
+                      <p class="heart-icon">
+                        <%= link_to item_likes_path(item), method: :delete  do%>
+                        <i class="fas fa-heart"></i>
+                        <% end %>
+                      </p>
+                    <%else%>
+                      <p class="heart-icon">
+                        <%= link_to item_likes_path(item), method: :post  do%>
+                          <i class="far fa-heart"></i>
+                        <% end %>
+                      </p>
+                    <% end %>
+                    <%= item.likes.count%>
                   </div>
                 </div>
               </div>
             </li>
           <% end %> 
-          <%# 商品がない時のみ表示 %>
-          <% unless @items.present? %>
-            <li class='list'>
-              <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  販売可能な商品がありません。<br>
-                  しばらくお待ちください。
-                </h3>
-              </div>
-            </li>
-          <% end %>
-          <%# 商品がない時のみ表示 %>
         </ul>
       <% end %>
     </div>

@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+    @item.user_id = current_user.id
   end
 
   def show

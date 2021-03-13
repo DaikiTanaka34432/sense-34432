@@ -126,20 +126,24 @@ text-align: left;
 margin:5px 0;
 }
 
-.star-money{
+.fee-heart{
   display:flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .item-price{
-  padding-top: 10px;
+  padding-top:5px;
 }
 
-.star-btn{
-  margin-top: 5px;
+.heart-click{
+ padding: 0 5px; 
+ display:flex;
 }
-.star-icon{
-  height: 5vh;
+
+.fa-heart{
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .sold-out{

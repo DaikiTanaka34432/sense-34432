@@ -19,9 +19,16 @@ class User < ApplicationRecord
     end
     validates :telephone, format:{with: /\A\d{11}\z/, message: "is invalid. 11桁以内の半角数字で入力してください"}
   end
- 
+
+  # いいねをしたかを判定
+  def liked_by?(item)
+    # current_userに結びついているいいねの中で、いいねをしようとしているアイテムのitem_idが存在するか
+    self.likes.exists?(item_id: item.id)
+  end
+
   # Associations
   has_many :items
+  has_many :likes, dependent: :destroy
   has_many :orders
 
   extend ActiveHash::Associations::ActiveRecordExtensions
