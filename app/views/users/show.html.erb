@@ -36,6 +36,50 @@
     <div class="user-items">
       <% if @user.user_check_id != 1 %>
         <p>お気に入り商品一覧</p>
+        <ul class='item-lists'>
+          <% @user.like_items.each do |item| %>
+            <li class='list'>
+              <%= link_to item_path(item.id), method: :get do %>
+                <div class='item-img-content'>
+                  <%= image_tag item.image, class: "item-img" %>
+
+                  <% if item.nil? %>
+                    <div class='sold-out'>
+                      <span>Sold Out!!</span>
+                    </div>
+                  <% end %>
+
+                </div>
+              <% end %> 
+              <div class="item-footer">
+                  <h3 class='item-name'>
+                    <%= item.name %>
+                  </h3>
+                <div class='star-money'>
+                  <div class='item-price'>
+                    <span>¥ <%= item.fee %>円</span>
+                  </div>
+                  <div class="heart-click">
+                    <% if current_user.liked_by?(item) %>
+                      <p class="heart-icon">
+                        <%= link_to item_likes_path(item), method: :delete  do%>
+                        <i class="fas fa-heart"></i>
+                        <% end %>
+                      </p>
+                    <%else%>
+                      <p class="heart-icon">
+                        <%= link_to item_likes_path(item), method: :post  do%>
+                          <i class="far fa-heart"></i>
+                        <% end %>
+                      </p>
+                    <% end %>
+                    <%= item.likes.count%>
+                  </div>
+                </div>
+              </div>
+            </li>
+          <% end %> 
+        </ul>
       <% else %>
         <p>出品商品一覧</p>
         <ul class='item-lists'>
