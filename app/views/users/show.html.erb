@@ -60,9 +60,17 @@
                     <span>¥ <%= item.fee %>円</span>
                   </div>
                   <%# いいね機能 非同期通信%>
-                  <div class="heart-click" id="like_button_<%=item.id%>" >
-                      <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
-                  </div>
+                  <% if user_signed_in? %>
+                    <% if current_user.id != item.user.id%>
+                      <div class="heart-click" id="like_button_<%=item.id%>" >
+                          <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
+                      </div>
+                    <% else %>
+                        いいね:<%= item.likes.count%>
+                    <% end %>
+                  <% else %>
+                      いいね:<%= item.likes.count%>
+                  <% end %>
                   <%# /いいね機能 非同期通信%>
                 </div>
               </div>

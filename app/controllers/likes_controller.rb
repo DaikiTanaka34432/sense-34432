@@ -1,9 +1,9 @@
 class LikesController < ApplicationController
-  before_action :set_item
+  before_action :authenticate_user!, only:[:create, :destroy]
+  before_action :set_item, only:[:create, :destroy]
 
   def create
     @like = current_user.likes.create(item_id: params[:item_id])  
-    #current_userに結びついたいいねを作成,item_id: params[:item_id])でいいねしたitemのidを@likeに入れる。
   end
 
   def destroy
@@ -14,7 +14,6 @@ class LikesController < ApplicationController
   private 
   def set_item
   @item = Item.find(params[:item_id])
-   # どのitemに結びついているいいねを削除するのかを探して持ってくる。
   end
 
 end
