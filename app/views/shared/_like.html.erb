@@ -1,3 +1,18 @@
 
+  <% if current_user.liked_by?(item) %>
+    <p class="heart-icon">
+      <%= link_to item_likes_path(item.id), method: :delete, remote:true  do%>
+      <i class="fas fa-heart"></i>
+      <% end %>
+    </p>
+  <%else%>
+    <p class="heart-icon">
+      <%= link_to item_likes_path(item.id), method: :post, remote:true   do%>
+        <i class="far fa-heart"></i>
+      <% end %>
+    </p>
+  <% end %>
+  <%= item.likes.count%>
+
 
     

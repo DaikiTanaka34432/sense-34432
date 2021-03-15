@@ -2,5 +2,5 @@ class Like < ApplicationRecord
   validates_uniqueness_of :item_id, scope: :user_id
 
   belongs_to :user
-  belongs_to :item
+  belongs_to :item, counter_cache: :likes_count
 end
