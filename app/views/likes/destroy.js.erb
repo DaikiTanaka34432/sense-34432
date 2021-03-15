@@ -1,0 +1,1 @@
+$("#like_button_<%=@item.id%>").html("<%= escape_javascript(render partial: 'shared/like', locals:{item: @item, like: @like, user_id: current_user.id})%>");

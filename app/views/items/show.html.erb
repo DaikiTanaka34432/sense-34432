@@ -50,12 +50,19 @@
             <p>¥<%= @item.fee %>円(税込)</p>
           </span>
         </div>
-        <div class="option">
-          <div class="favorite-btn">
-            <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"18",height:"18"%>
-            <span>お気に入り 0</span>
-          </div>
-        </div>
+        <%# いいね機能 非同期通信%>
+        <% if user_signed_in? %>
+          <% if current_user.id != @item.user.id%>
+            <div class="heart-click" id="like_button_<%=@item.id%>" >
+                <%= render partial: 'shared/like', locals:{item: @item, like: @like} %>
+            </div>
+          <% else %>
+            いいね:<%= @item.likes.count%>
+          <% end %>
+        <% else %>
+            いいね:<%= @item.likes.count%>
+        <% end %>
+        <%# /いいね機能 非同期通信%>
       </div>
       <div class="buttons">
         

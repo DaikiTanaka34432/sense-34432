@@ -31,18 +31,22 @@
               </div>
             <% end %> 
             <div class="item-footer">
-                <h3 class='item-name'>
-                  <%= item.name %>
-                </h3>
-              <div class='star-money'>
-                <div class='item-price'>
-                  <span>¥ <%= item.fee %>円</span>
-                </div>
-                <div class='star-btn'>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
-                </div>
-              </div>
+              <h3 class='item-name'>
+                <%= item.name %>
+              </h3>
+              <%# いいね機能 非同期通信%>
+              <% if user_signed_in? %>
+                <% if current_user.id != item.user.id%>
+                  <div class="heart-click" id="like_button_<%=item.id%>" >
+                      <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
+                  </div>
+                <% else %>
+                   いいね:<%= item.likes.count%>
+                <% end %>
+              <% else %>
+                  いいね:<%= item.likes.count%>
+              <% end %>
+              <%# /いいね機能 非同期通信%>
             </div>
           </li>
         <% end %> 

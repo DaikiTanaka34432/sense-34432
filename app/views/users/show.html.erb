@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/user_header" %>
 
 <%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>
 <% if user_signed_in? && current_user.user_check_id == 1 %>
@@ -14,12 +14,14 @@
       <%= @user.nickname %> さん
     </div>
     <h2>＜プロフィール＞</h2>
+    <% if current_user.user_check_id == 1 %>
       <div class="talent-office">
         <%= @user.office.name%> 所属
       </div>
         <div class="talent-career">
         <%= @user.career%>結成（本当は〜年目と表示したい）
       </div>
+    <% end %>
       <div class="user-introduction">
         <%= @user.introduction%>
       </div>
@@ -34,9 +36,50 @@
     <div class="user-items">
       <% if @user.user_check_id != 1 %>
         <p>お気に入り商品一覧</p>
+        <ul class='item-lists'>
+          <% @user.like_items.each do |item| %>
+            <li class='list'>
+              <%= link_to item_path(item.id), method: :get do %>
+                <div class='item-img-content'>
+                  <%= image_tag item.image, class: "item-img" %>
+
+                  <% if item.nil? %>
+                    <div class='sold-out'>
+                      <span>Sold Out!!</span>
+                    </div>
+                  <% end %>
+
+                </div>
+              <% end %> 
+              <div class="item-footer">
+                  <h3 class='item-name'>
+                    <%= item.name %>
+                  </h3>
+                <div class='star-money'>
+                  <div class='item-price'>
+                    <span>¥ <%= item.fee %>円</span>
+                  </div>
+                  <%# いいね機能 非同期通信%>
+                  <% if user_signed_in? %>
+                    <% if current_user.id != item.user.id%>
+                      <div class="heart-click" id="like_button_<%=item.id%>" >
+                          <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
+                      </div>
+                    <% else %>
+                        いいね:<%= item.likes.count%>
+                    <% end %>
+                  <% else %>
+                      いいね:<%= item.likes.count%>
+                  <% end %>
+                  <%# /いいね機能 非同期通信%>
+                </div>
+              </div>
+            </li>
+          <% end %> 
+        </ul>
       <% else %>
         <p>出品商品一覧</p>
-          <ul class='item-lists'>
+        <ul class='item-lists'>
           <% @items.each do |item| %>
             <li class='list'>
               <%= link_to item_path(item.id), method: :get do %>
@@ -59,27 +102,15 @@
                   <div class='item-price'>
                     <span>¥ <%= item.fee %>円</span>
                   </div>
-                  <div class='star-btn'>
-                    <%= image_tag "star.png", class:"star-icon" %>
-                    <span class='star-count'>0</span>
+                  <%# いいね機能 非同期通信%>
+                  <div class="heart-click" id="like_button_<%=item.id%>" >
+                      <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
                   </div>
+                  <%# /いいね機能 非同期通信%>
                 </div>
               </div>
             </li>
           <% end %> 
-          <%# 商品がない時のみ表示 %>
-          <% unless @items.present? %>
-            <li class='list'>
-              <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  販売可能な商品がありません。<br>
-                  しばらくお待ちください。
-                </h3>
-              </div>
-            </li>
-          <% end %>
-          <%# 商品がない時のみ表示 %>
         </ul>
       <% end %>
     </div>

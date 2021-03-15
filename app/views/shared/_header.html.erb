@@ -6,43 +6,42 @@
   <div class='nav'>
     <ul class='lists-left'>
       <%= search_form_for @search, url: search_items_path do |f| %>
-      <div class="select-categories">
-        <div class="select-category">
-        <p><%= f.label :user_nickname_eq, 'お笑い芸人', class:'label-names'%></p>
-        <p><%= f.search_field :user_nickname_cont, class:'search-field'%></p>
+        <div class="select-categories">
+          <div class="select-category">
+          <p><%= f.label :user_nickname_eq, 'お笑い芸人', class:'label-names'%></p>
+          <p><%= f.search_field :user_nickname_cont, class:'search-field'%></p>
+          </div>
+          <div class="select-category">
+            <p><%= f.label :user_office_id_eq, '所属事務所', class:'label-names'%></p>
+            <p><%= f.collection_select :user_office_id_eq, Office.all, :id, :name, include_blank:'指定なし' %></p>
+          </div>
+          <div class="select-category">
+            <p><%= f.label :category_id_eq, 'カテゴリー', class:'label-names' %></p>
+            <p><%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし' %></p>
+          </div>
         </div>
-        <div class="select-category">
-          <p><%= f.label :user_office_id_eq, '所属事務所', class:'label-names'%></p>
-          <p><%= f.collection_select :user_office_id_eq, Office.all, :id, :name, include_blank:'指定なし' %></p>
+        <div class="search-fee">
+          <p><%= f.label :fee_eq, '価格', class:'label-names' %></p> 
+          <p>
+          <%= f.number_field :fee_gteq, class:'search-field'%>
+          〜
+          <%= f.number_field :fee_lteq, class:'search-field' %> 円
+          </p>
         </div>
-        <div class="select-category">
-          <p><%= f.label :category_id_eq, 'カテゴリー', class:'label-names' %></p>
-          <p><%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし' %></p>
+        <div class="search-buttons">
+          <%= f.submit '検索', class:'search-button'%>
+          <%= link_to 'リセット', root_path, class:'reset-button'%>
         </div>
-      </div>
-      <div class="search-fee">
-        <p><%= f.label :fee_eq, '価格', class:'label-names' %></p> 
-        <p>
-        <%= f.number_field :fee_gteq, class:'search-field'%>
-        〜
-        <%= f.number_field :fee_lteq, class:'search-field' %> 円
-        </p>
-      </div>
-      <div class="search-buttons">
-        <%= f.submit '検索', class:'search-button'%>
-        <%= link_to 'リセット', root_path, class:'reset-button'%>
-      </div>
       <% end %>
-  
     </ul>
     
     <ul class='lists-right'>
       <div class="header-icon">
-      <%= link_to image_tag("smile.png", class:"header-logo" ), root_path %>
+        <%= link_to image_tag("smile.png", class:"header-logo" ), root_path %>
       </div>
       <div class="login-status">
         <% if user_signed_in? %>
-          <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %> </li>
+          <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         <% else %>
           <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
