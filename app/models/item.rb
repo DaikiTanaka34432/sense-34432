@@ -10,6 +10,7 @@ class Item < ApplicationRecord
     validates :shipment_days_id
     validates :fee, inclusion:{in: 300..9999999, message:'指定金額の範囲で入力して下さい'},
      numericality:{only_integer: true, message:'半角数字を使用して下さい'}
+    validates :user_id
   end
 
   with_options numericality:{other_than: 0} do
