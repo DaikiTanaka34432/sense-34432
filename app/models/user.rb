@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  require "date"
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -25,6 +26,14 @@ class User < ApplicationRecord
     # current_userに結びついているいいねの中で、いいねをしようとしているアイテムのitem_idが存在するか
     self.likes.exists?(item_id: item.id)
   end
+
+  #芸歴計算
+  def career_num
+    d1 = self.career.strftime("%Y%m%d").to_i
+    d2 = Date.today.strftime("%Y%m%d").to_i
+    return ((d2 - d1)/10000) +1 
+  end
+
 
   # Associations
   has_many :items
