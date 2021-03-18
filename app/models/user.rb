@@ -34,6 +34,9 @@ class User < ApplicationRecord
     return ((d2 - d1)/10000) +1 
   end
 
+  #購入した商品がどれか
+  def ordered_items
+  end
 
   # Associations
   has_many :items

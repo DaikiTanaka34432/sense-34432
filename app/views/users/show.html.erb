@@ -25,6 +25,14 @@
       <div class="user-introduction">
         <%= @user.introduction%>
       </div>
+      <div class="ordered-items">
+        <h3>購入済み作品</h3>
+        <% @user.orders.each do |ordered| %> 
+          <p>
+          <%= link_to "#{ordered.item.name}", item_path(ordered.item.id), method: :get, class:"ordered-item"%>
+          </P>
+        <% end %>
+      </div>
       <div class="profile-edit-button">
         <% if user_signed_in? && current_user.id == @user.id%>
           <%= link_to "ユーザー情報編集", edit_user_path(current_user.id), method: :get, class:"user-edit" %>
@@ -43,7 +51,7 @@
                 <div class='item-img-content'>
                   <%= image_tag item.image, class: "item-img" %>
 
-                  <% if item.nil? %>
+                  <% if item.order.present? %>
                     <div class='sold-out'>
                       <span>Sold Out!!</span>
                     </div>
