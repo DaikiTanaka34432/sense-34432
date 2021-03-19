@@ -11,10 +11,10 @@
 
   <%# senseの特徴 %>
   <div class='feature-contents'>
-    <%= image_tag 'm1-9.png', class:"feature-pict" %>
+    <%= image_tag 'smile.png', class:"feature-pict" %>
     <div class="feature-words">
       <h2 class='title'>
-        senseの特徴
+        senseのpoints
       </h2>
       <ul class='feature-lists'>
         <li class='list'>
@@ -24,7 +24,7 @@
         </li>
         <li class='list'>
           <h3 class='feature-list-text'>
-            出品作品は全て一点モノの！
+            出品作品は全て一点モノ！
           </h3>
         </li>
         <li class='list'>
@@ -52,7 +52,7 @@
               <%= image_tag item.image, class: "item-img" %>
 
               <% if item.order.present? %>
-                <div class='sold-out'>
+                <div class='sold-outs'>
                   <span>Sold Out!!</span>
                 </div>
               <% end %>
@@ -68,17 +68,19 @@
                 <span>¥ <%= item.fee %>円</span>
               </div>
               <%# いいね機能 非同期通信%>
-              <% if user_signed_in? %>
-                <% if current_user.id != item.user.id%>
-                  <div class="heart-click" id="like_button_<%=item.id%>" >
-                      <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
-                  </div>
+              <div class="hearts">
+                <% if user_signed_in? %>
+                  <% if current_user.id != item.user.id%>
+                    <div class="heart-click" id="like_button_<%=item.id%>" >
+                        <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
+                    </div>
+                  <% else %>
+                    いいね:<%= item.likes.count%>
+                  <% end %>
                 <% else %>
-                  いいね:<%= item.likes.count%>
+                    いいね:<%= item.likes.count%>
                 <% end %>
-              <% else %>
-                  いいね:<%= item.likes.count%>
-              <% end %>
+              </div>
               <%# /いいね機能 非同期通信%>
             </div>
           </div>

@@ -9,17 +9,19 @@
 
 <div class="separate">
   <div class="side-profile">
-    <div class="user-nickname">
-      <%= @user.nickname %> さん
+    <div class="user-pro">
+      <div class="nicknames">
+        <%= @user.nickname %> さん
+      </div>
+      <div class="edit-back-btn">
+        <% if user_signed_in? && current_user.id == @user.id%>
+          <p><%= link_to "編集", edit_user_path(current_user.id), method: :get, class:"user-edit" %></p>
+        <% end %>
+        <p><%= link_to "もどる", :back, class:"back-btn"%></p>
+      </div>
     </div>
-    <div class="profile-edit-button">
-      <% if user_signed_in? && current_user.id == @user.id%>
-        <%= link_to "ユーザー情報編集", edit_user_path(current_user.id), method: :get, class:"user-edit" %>
-      <% end %>
-      <%= link_to "もどる", :back, class:"back-btn"%>
-    </div>
-    <h2>＜プロフィール＞</h2>
-    <% if current_user.user_check_id == 1 %>
+    <h2>- Profile -</h2>
+    <% if @user.user_check_id == 1 %>
       <div class="talent-office">
         <%= @user.office.name%> 所属
       </div>
@@ -31,7 +33,7 @@
         <%= @user.introduction%>
       </div>
       <div class="ordered-items">
-        <h3>購入済み作品</h3>
+        <h3>- 購入済み作品 -</h3>
         <% @user.orders.each do |ordered| %> 
           <p>
           <%= link_to "#{ordered.item.name}", item_path(ordered.item.id), method: :get, class:"ordered-item"%>
@@ -47,12 +49,15 @@
         <ul class='item-lists'>
           <% @user.like_items.each do |item| %>
             <li class='list'>
+              <div class="item-talent">
+                <%= link_to item.user.nickname, user_path(item.user.id), method: :get, class:"item-talent-name" %>
+              </div>
               <%= link_to item_path(item.id), method: :get do %>
                 <div class='item-img-content'>
                   <%= image_tag item.image, class: "item-img" %>
 
                   <% if item.order.present? %>
-                    <div class='sold-out'>
+                    <div class='sold-outs'>
                       <span>Sold Out!!</span>
                     </div>
                   <% end %>
@@ -63,23 +68,23 @@
                   <h3 class='item-name'>
                     <%= item.name %>
                   </h3>
-                <div class='star-money'>
-                  <div class='item-price'>
-                    <span>¥ <%= item.fee %>円</span>
-                  </div>
-                  <%# いいね機能 非同期通信%>
+                <div class='fee-heart'>
+                <div class='item-price'>
+                  <span>¥ <%= item.fee %>円</span>
+                </div>
+                <%# いいね機能 非同期通信%>
+                <div class="hearts">
                   <% if user_signed_in? %>
                     <% if current_user.id != item.user.id%>
                       <div class="heart-click" id="like_button_<%=item.id%>" >
                           <%= render partial: 'shared/like', locals:{item: item, like: @like} %>
                       </div>
                     <% else %>
-                        いいね:<%= item.likes.count%>
+                      いいね:<%= item.likes.count%>
                     <% end %>
                   <% else %>
                       いいね:<%= item.likes.count%>
                   <% end %>
-                  <%# /いいね機能 非同期通信%>
                 </div>
               </div>
             </li>
