@@ -15,7 +15,11 @@
 
 .item-name-image>.name{
   font-size:18px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.item-img-content{
+  position: relative;
 }
 
 .item-box-img{  
@@ -23,19 +27,6 @@
   width: 100%;
   max-height: 350px;
   object-fit: contain;
-}
-
-.sold-out{
-  position: absolute;
-  top: 40%;
-  padding: 2% 0;
-  margin: 0 auto;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  background-color: yellow;
-  transform: skewX(-18deg);
-  transform: skewY(-18deg);
 }
 
 .item-about{
@@ -75,9 +66,17 @@
   font-size: 18px;
 }
 
+.heart-posit {
+  float: right;
+}
+
 .option{
   text-align: end;
   margin: 2vh 0;
+}
+
+.user-selects{
+  margin: auto 0;
 }
 
 .buttons{
@@ -100,6 +99,10 @@
   text-shadow: 2px 2px rgb(197, 194, 194);
 }
 
+.user-select>.need-log{
+  text-align:center;
+}
+
 .return-btn{
   margin: auto 0;
   padding: 1vh 1vw;
@@ -114,4 +117,17 @@
 
 .item-destroy{
   text-decoration: none;
+}
+
+.sold-out{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: yellow;
+  z-index: 90;
 }

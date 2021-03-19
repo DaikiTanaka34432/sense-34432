@@ -1,16 +1,18 @@
 .purchase-btn {
   width: 120px;
   height: 120px;
-  background: #00a48d;
+  background-color: #fff;
   border-radius: 50%;
-  border:2px solid #333;
-  top: 52px;
-  right: 30px;
+  border: 1px solid #333;
+  text-shadow: 10px gray;
+  top: 48px;
+  right: 20px;
   position: fixed;
+  z-index: 100;
 }
 
 .purchase-btn-text {
-  color: #fff;
+  color: #00a48d;
   display: block;
   font-size: 20px;
   text-decoration: none;
@@ -29,14 +31,13 @@
   padding: 30px;
   width: 80%;
   position: relative;
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  filter: blur(8px);
 }
 
 .feature-words{
   position: absolute;
   top: 400px;
-  left: 205px;
+  left: 220px;
 }
 
 .feature-words>.title{
@@ -51,6 +52,7 @@
   color: #FFF;
   margin: 10px 0;
   text-shadow: 4px 3px 3px #00a48d;
+  padding: 10px 0;
 }
 
 
@@ -86,34 +88,35 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 25px 0;
   overflow: scroll;
+  padding: 0 8rem;
 }
 
 .item-lists >.list{
   width: 37vh;
-  padding: 1vw;
   background-color: #FFF;
-  margin: 10px 5px;
+  padding: 15px;
+  margin: 30px 20px;
+  border: 1px solid #00a48d;
+  border-radius: 10px;
+  position:relative;
 }
 
 .item-talent{
-  font-size: 20px;
-  padding-bottom: 15px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .item-talent-name{
   text-decoration: none;
 }
 
-.item-img-content{
-  position:relative;
-}
-
 .item-img{
   width: 33vh;
   height: 33vh;
-  border-radius: 5%;
+  text-align: center;
 }
 
 .item-footer{
@@ -123,7 +126,8 @@
 
 .item-name{
 text-align: left;
-margin:5px 0;
+margin:20px 0;
+font-size: 16px;
 }
 
 .fee-heart{
@@ -132,29 +136,40 @@ margin:5px 0;
   margin-top: 10px;
 }
 
+
 .item-price{
   padding-top:5px;
 }
 
+.hearts{
+  margin-right: 3%;
+  padding-top:5px;
+}
+
 .heart-click{
- padding: 0 5px; 
  display:flex;
 }
 
 .fa-heart{
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
 }
 
-.sold-out{
+.heart-icon{
+  margin-bottom: 0%;
+}
+
+.sold-outs{
   position: absolute;
-  top: 40%;
-  width: 100%;
-  padding: 3% 0;
-  font-size: 18px;
+  top: 0%;
+  right: -7%;
+  padding: 0 20px;;
+  margin: 0 auto;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   background-color: yellow;
+  z-index: 90;
 }
 
 

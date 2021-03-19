@@ -5,7 +5,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 10vw;
+  padding: 2vh 10vw 0 10vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+  padding: 1% ;
 }
 
 .lists-left {
@@ -38,6 +38,14 @@
 
 .select-category{
   margin-right:24px;
+}
+
+.select-category > p{
+  margin-bottom: 2px;
+} 
+
+.search-fee > p{
+  margin-bottom: 2px;
 }
 
 .label-names{
@@ -61,10 +69,6 @@
 .office-list {
   text-decoration: none;
   color: #333333;
-}
-
-.search-buttons{
-
 }
 
 .search-button {
@@ -92,6 +96,8 @@
 
 .lists-right {
   list-style: none;
+  padding-left: 0%;
+  padding-right: 2rem;
 }
 
 .header-icon{
@@ -104,6 +110,7 @@
 
 .login-status{
   display: flex;
+  margin-top: 20%;
 }
 
 .user-nickname {

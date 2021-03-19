@@ -11,12 +11,31 @@
   overflow: scroll;
 }
 
-.user-nickname{
-  font-size: 20px;
+.user-pro{
+  height: 12vh;
   margin-bottom:5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-h2{
+.nicknames{
+  font-size: 18px;
+  width: 78%;
+}
+
+.edit-back-btn{
+  width: 22%;
+  padding-right: 6%;
+}
+
+a.user-edit, a.back-btn{
+  text-decoration: none;
+  float: right;
+  
+}
+
+.side-profile>h2{
+  font-size: 18px;
   font-weight: bold;
   margin-bottom:5px;
 }
@@ -36,15 +55,19 @@ h2{
   border: 1px solid #333;
 }
 
-.profile-edit-button{
-  width: 94%;
-  margin: 0 auto;
+.ordered-items>h3{
+  font-size: 16px;
   font-weight: bold;
+  margin-bottom:5px;
 }
 
-.user-edit{
+.ordered-items> a.ordered-item{
   text-decoration: none;
+  font-size: 16px;
+  margin-bottom:5px;
+  cursor: pointer;
 }
+
 
 .items-area{
   width: 78%;

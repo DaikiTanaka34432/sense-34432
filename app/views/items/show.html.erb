@@ -51,21 +51,23 @@
           </span>
         </div>
         <%# いいね機能 非同期通信%>
-        <% if user_signed_in? %>
-          <% if current_user.id != @item.user.id%>
-            <div class="heart-click" id="like_button_<%=@item.id%>" >
-                <%= render partial: 'shared/like', locals:{item: @item, like: @like} %>
-            </div>
+        <div class="heart-posit">
+          <% if user_signed_in? %>
+            <% if current_user.id != @item.user.id%>
+              <div class="heart-click" id="like_button_<%=@item.id%>" >
+                  <%= render partial: 'shared/like', locals:{item: @item, like: @like} %>
+              </div>
+            <% else %>
+              いいね:<%= @item.likes.count%>
+            <% end %>
           <% else %>
-            いいね:<%= @item.likes.count%>
+              いいね:<%= @item.likes.count%>
           <% end %>
-        <% else %>
-            いいね:<%= @item.likes.count%>
-        <% end %>
+        </div>
         <%# /いいね機能 非同期通信%>
       </div>
       <div class="buttons">
-        
+        <div class="user-selects">
           <% unless @item.order.present? %>
             <% if user_signed_in?%>
               <div class="users-button">
@@ -73,13 +75,14 @@
                   <p> <%= link_to "商品編集", edit_item_path, method: :get, class: "item-btn" %></p>
                   <p><%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %></P>
                 <% else %>
-                  <%# 商品が売れていない時 %>
                   <p><%= link_to "購入画面に進む", item_orders_path(@item.id), method: :get,  class:"item-btn"%></P>
-                  <%# //商品が売れていない時%>
                 <% end %>
               </div>
+            <% else %>
+              <div class="need-log"> -購入にはログインが必要です-</div>
             <% end %>
           <% end %>
+        </div>
         <div class="return-btn">
           <%= link_to "もどる", :back ,class:"item-btn"%>
         </div>
