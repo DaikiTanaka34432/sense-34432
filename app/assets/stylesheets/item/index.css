@@ -36,8 +36,8 @@
 
 .feature-words{
   position: absolute;
-  top: 400px;
-  left: 220px;
+  top: 30vw;
+  left: 15vw;
 }
 
 .feature-words>.title{
