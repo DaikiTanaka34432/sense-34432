@@ -24,13 +24,23 @@
 text-align: end;
 }
 
+.buy-item-image{
+text-align:center;
+}
+
 .buy-item-img{
+  max-width: 350px;
   width: 100%;
-  margin: 10px 0;
+  margin: 15px 0;
+}
+
+.buy-item-content{
+ font-size: 20px;
 }
 
 .buy-item-text{
   margin: 15px 2px;
+  font-size: 20px;
 }
 
 .buy-item-price>p{
@@ -46,10 +56,14 @@ text-align: end;
   justify-content: flex-end;
   margin: 15px 2px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .item-pay-title{
   margin-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
 }
 /* 購入商品情報 */
 
@@ -68,6 +82,10 @@ text-align: end;
 .form-wrap{
   margin: 0 auto;
   text-align: start;
+}
+
+.input-expiration-date-wrap>p{
+  margin: 0 5px;
 }
 
 /* カード情報 */
@@ -94,3 +112,7 @@ text-align: end;
   width: 50%;
 }
 /* 配送先情報 */
+
+.order-button{
+  text-align: center;
+}

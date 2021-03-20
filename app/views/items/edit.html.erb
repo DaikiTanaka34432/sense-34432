@@ -3,7 +3,9 @@ app/assets/stylesheets/items/new.css %>
 
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to "senseロゴ", root_path %>
+    <div class="header-icon">
+      <%= link_to image_tag("smile.png", class:"header-logo" ), root_path %>
+    </div>
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
@@ -37,14 +39,14 @@ app/assets/stylesheets/items/new.css %>
           商品の説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :profile, class:"items-text", id:"item-info", placeholder:"ご自由にお書きください（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :profile, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、サイズ、素材、重さ、注意点など）" ,rows:"7" ,maxlength:"1000" %>
       </div>
       <div class="items-explain">
         <div class="weight-bold-text">
-          商品の詳細
+          商品への想い
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :detail, class:"items-text", id:"item-info", placeholder:"商品の詳細（必須 1,000文字まで）（色、サイズ、素材、重さ、注意点など）" ,rows:"6" ,maxlength:"1000" %>
+        <%= f.text_area :detail, class:"items-text", id:"item-info", placeholder:"商品への想い（必須 1,000文字まで）ご自由にお書きください" ,rows:"6" ,maxlength:"1000" %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
@@ -139,20 +141,17 @@ app/assets/stylesheets/items/new.css %>
     <%# /注意書き %>
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
-      <%= f.submit "変更する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', :back, class:"back-btn" %>
+      <p><%= f.submit "更新する" ,class:"sell-btn" %></p>
+      <p><%= link_to 'もどる', :back, class:"back-btn" %><p>
     </div>
     <%# /下部ボタン %>
   </div>
   <% end %>
 
   <footer class="items-sell-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">senes利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-     <%= link_to "senseロゴ", root_path %>  
+    <div class="header-icon">
+      <%= link_to image_tag("smile.png", class:"header-logo" ), root_path %>
+    </div> 
     <p class="inc">
       ©︎sense,Inc.
     </p>

@@ -14,41 +14,41 @@
 .purchase-btn-text {
   color: #00a48d;
   display: block;
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
   margin-bottom: 5px;
   position: absolute;
   top: 40px;
-  left: 20px;
+  left: 34px;
 }
 
 .feature-contents {
   text-align: center;
   display: block;
+  position: relative;
 }
 
 .feature-pict{
   padding: 30px;
   width: 80%;
-  position: relative;
   filter: blur(8px);
 }
 
 .feature-words{
   position: absolute;
-  top: 30vw;
-  left: 15vw;
+  top: 18vw;
+  left: 12vw;
 }
 
 .feature-words>.title{
-  font-size: 70px;
+  font-size: 5vw;
   color: #FFF;
   margin-bottom: 10px;
   text-shadow: 4px 3px 3px #00a48d;;
 }
 
 .feature-list-text{
-  font-size: 40px;
+  font-size: 3vw;
   color: #FFF;
   margin: 10px 0;
   text-shadow: 4px 3px 3px #00a48d;
@@ -68,6 +68,7 @@
 .item-contents>.title{
   font-size: 50px;
   width: 100%;
+  padding: 2% 0;
   background-color: #00a48d;
 }
 
@@ -163,7 +164,7 @@ font-size: 16px;
   position: absolute;
   top: 0%;
   right: -7%;
-  padding: 0 20px;;
+  padding: 0 20px;
   margin: 0 auto;
   font-size: 20px;
   font-weight: bold;
