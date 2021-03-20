@@ -67,3 +67,4 @@ gem 'ransack'
 gem 'ancestry'
 gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'jquery-rails'
+gem "aws-sdk-s3", require: false
