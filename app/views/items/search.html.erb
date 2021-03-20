@@ -4,7 +4,7 @@
 <%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>
 <% if user_signed_in? && current_user.user_check_id == 1 %>
   <%= link_to(new_item_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>出品する</span>
+    <span class='purchase-btn-text'>出品</span>
   <% end %>
 <% end %>
 <%# ログイン中ユーザーのuser_check_id=1の時のみ表示 %>

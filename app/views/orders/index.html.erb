@@ -5,7 +5,9 @@
     <h1 class='transaction-title-text'>購入内容の確認 </h1>
       <%# 購入内容の表示 %>
       <div class='buy-item-info'>
-        <%= image_tag @item.image, class: 'buy-item-img' %>
+        <div class="buy-item-image">
+          <%= image_tag @item.image, class: 'buy-item-img' %>
+        </div>
         <div class='buy-item-content'>
           <h2 class='buy-item-text'>
             <%= @item.name %>
@@ -32,7 +34,7 @@
       </div>
       <%# /購入内容の表示 %>
 
-    <%= form_with model:@order_address, url: item_orders_path, id:'charge-form', class:'card-form', local: true do |f| %>
+      <%= form_with model:@order_address, url: item_orders_path, id:'charge-form', class:'card-form', local: true do |f| %>
       <%# /クレカ情報 %>
       <h1 class='credit-info'>クレジットカード情報</h1>
       <div class='form-wrap'>
@@ -53,6 +55,7 @@
         </div>
       </div>
       <%# /クレカ情報 %>
+
       <%# 配送先情報 %>
       <h1 class='customer-add'>配送先住所</h1>
       <div class="field">
@@ -80,7 +83,9 @@
         <%= f.text_field :telephone %>
       </div>
       <%# /配送先情報 %>
-      <%= f.submit "購入", class:"button"%>
+      <div class="order-button">
+        <%= f.submit "購入", class:"button"%>
+      </div>
       <%= link_to "もどる", :back, class:"back-btn"%>
     <% end %>
   </div>

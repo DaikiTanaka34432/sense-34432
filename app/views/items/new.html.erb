@@ -1,7 +1,8 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to "senseのロゴ", root_path, class:"apuri-rogo" %>
-
+    <div class="header-icon">
+      <%= link_to image_tag("smile.png", class:"header-logo" ), root_path %>
+    </div>
   </header>
 
   <div class="items-sell-main">
@@ -40,14 +41,14 @@
             商品の説明
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_area :profile, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（ご自由にお書きください。）" ,rows:"7" ,maxlength:"1000" %>
+          <%= f.text_area :profile, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、サイズ、素材、重さ、注意点など）" ,rows:"7" ,maxlength:"1000" %>
         </div>
         <div class="items-explain">
           <div class="weight-bold-text">
-            商品の詳細
+            商品への想い
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_area :detail, class:"items-text", id:"item-info", placeholder:"商品の詳細（必須 1,000文字まで）（色、サイズ、素材、重さ、注意点など）" ,rows:"6" ,maxlength:"1000" %>
+          <%= f.text_area :detail, class:"items-text", id:"item-info", placeholder:"商品への想い（必須 1,000文字まで）（ご自由にお書きください。）" ,rows:"6" ,maxlength:"1000" %>
         </div>
       </div>
       <%# /商品名と商品説明 %>
@@ -143,20 +144,17 @@
       <%# /注意書き %>
       <%# 下部ボタン %>
       <div class="sell-btn-contents">
-        <%= f.submit "出品する" ,class:"sell-btn" %>
-        <%= link_to 'もどる', :back, class:"back-btn" %>
+        <p><%= f.submit "出品する" ,class:"sell-btn" %></p>
+        <p><%= link_to 'もどる', :back, class:"back-btn" %><p>
       </div>
       <%# /下部ボタン %>
     <% end %>
   </div>
 
   <footer class="items-sell-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">sense利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <%= link_to "senseロゴ", root_path %>
+    <div class="footer-icon">
+      <%= link_to image_tag("smile.png", class:"footer-logo" ), root_path %>
+    </div>
     <p class="inc">
       ©︎sense,Inc.
     </p>

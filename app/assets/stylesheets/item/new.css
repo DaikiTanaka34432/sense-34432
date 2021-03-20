@@ -14,9 +14,9 @@
 
 .items-sell-main {
   background-color: #FFF;
-  width: 70vw;
+  width: 75vw;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 10vh 12vw;
 }
 
 .items-sell-title {
@@ -153,3 +153,20 @@
 }
 
 /* /販売価格 */
+
+/* 出品ボタン フッター */
+.sell-btn-contents{
+  text-align: center;
+  font-size: 18px;
+  padding: 2px;
+}
+
+.footer-icon{
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.inc{
+  text-align: center;
+  margin-top: 1rem;
+}
