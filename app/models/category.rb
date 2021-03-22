@@ -7,6 +7,7 @@ class Category < ActiveHash::Base
     {id: 4, name: '日用品'},
     {id: 5, name: '本・音楽・DVD'},
     {id: 6, name: 'おもちゃ・ホビー'},
+    {id: 7, name: 'イラスト・絵画'},
     {id: 8, name: 'レジャー'},
     {id: 9, name: 'ハンドメイド'},
     {id: 10, name: 'その他'}
