@@ -54,6 +54,10 @@
   justify-content: space-between;
   margin: 3vh 0;
 }
+.item-users{
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .detail-item{
   margin-right: 10vw;

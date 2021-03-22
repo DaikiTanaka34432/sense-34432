@@ -14,7 +14,7 @@
             <p><%= f.collection_select :user_office_id_eq, Office.all, :id, :name, include_blank:'指定なし' %></p>
           </div>
           <div class="select-category">
-            <p><%= f.label :category_id_eq, 'カテゴリー', class:'label-names' %></p>
+            <p><%= f.label :category_id_eq, '商品カテゴリ', class:'label-names' %></p>
             <p><%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし' %></p>
           </div>
         </div>

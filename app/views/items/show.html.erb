@@ -9,13 +9,13 @@
       </h2>
       <div class="item-img-content">
         <%= image_tag @item.image, class:"item-box-img" %>
-        <%# 商品が売れている場合は、sold outを表示しましょう %>
+     
         <% if @item.order.present? %>
           <div class="sold-out">
             <span>Sold Out!!</span>
           </div>
         <% end %>
-        <%# //商品が売れている場合は、sold outを表示しましょう %>
+     
       </div>
     </div>
     <div class="item-about">
@@ -27,7 +27,7 @@
       <div class="detail-table">
         <div class="details">
           <p class="detail-item">出品者</p>
-          <p class="detail-value"><%= @item.user.nickname %></p>
+          <p class="detail-value"><%= link_to "#{@item.user.nickname}", user_path(@item.user.id), method: :get, class:"item-users" %></p>
         </div>
         <div class="details">
           <p class="detail-item">カテゴリー</p>
@@ -74,7 +74,7 @@
                 <% if current_user.id == @item.user_id%>
                   <p> <%= link_to "編集", edit_item_path, method: :get, class: "item-btn" %></p>
                   <p><%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %></P>
-                <% else %>
+                <% elsif current_user.user_check_id == 2 %>
                   <p><%= link_to "購入画面", item_orders_path(@item.id), method: :get,  class:"item-btn"%></P>
                 <% end %>
               </div>
