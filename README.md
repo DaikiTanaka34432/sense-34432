@@ -145,101 +145,101 @@
 ## DEMO
 ### トップページ（商品一覧ページ）
 - トップページからユーザー新規登録・ログイン・ログアウト・商品出品・一覧表示・検索をすることができる。
-![index](https://user-images.githubusercontent.com/77190650/111932738-6c1cff80-8b01-11eb-8c7b-fa0b0b2252dd.gif)
-<br>
+![index](https://user-images.githubusercontent.com/77190650/111932738-6c1cff80-8b01-11eb-8c7b-fa0b0b2252dd.gif)<br>
+
 ### ユーザー登録ページ
 - 一般ユーザーとして利用を選択すると、登録フォームは通常通り表示される。
-![ippan-signup](https://user-images.githubusercontent.com/77190650/111933843-9c659d80-8b03-11eb-9e26-4fda43d1fdb1.gif)
-<br>
+![ippan-signup](https://user-images.githubusercontent.com/77190650/111933843-9c659d80-8b03-11eb-9e26-4fda43d1fdb1.gif)<br>
+
 - 芸人として利用を選択すると、所属事務所・芸歴のセレクトフォームが表示される。
-![talent-signup](https://user-images.githubusercontent.com/77190650/111933519-fe71d300-8b02-11eb-8056-fefe2c9ef960.gif)
-<br>
+![talent-signup](https://user-images.githubusercontent.com/77190650/111933519-fe71d300-8b02-11eb-8056-fefe2c9ef960.gif)<br>
+
 ### 商品出品ページ
 - 必須項目を入力し出品ボタンを押すとトップページに遷移し、商品が一覧ページに追加される。
-![item-sell](https://user-images.githubusercontent.com/77190650/111935171-3fb7b200-8b06-11eb-87d9-b6623d28d154.gif)
-<br>
+![item-sell](https://user-images.githubusercontent.com/77190650/111935171-3fb7b200-8b06-11eb-87d9-b6623d28d154.gif)<br>
+
 ### 商品詳細ページ
 - 商品をクリックすると詳細ページへ遷移し、商品の詳細情報を確認できる。
-![item-detail](https://user-images.githubusercontent.com/77190650/111935448-dc7a4f80-8b06-11eb-8082-0f14be1a9de7.gif)
-<br>
+![item-detail](https://user-images.githubusercontent.com/77190650/111935448-dc7a4f80-8b06-11eb-8082-0f14be1a9de7.gif)<br>
+
 ### 商品編集ページ
 - 編集ボタンをクリックすると編集ページへ遷移する。編集内容を更新すると、詳細ページへ遷移する。
-![item-edit](https://user-images.githubusercontent.com/77190650/111935695-5d394b80-8b07-11eb-9eb5-0e104c68abe4.gif)
-<br>
+![item-edit](https://user-images.githubusercontent.com/77190650/111935695-5d394b80-8b07-11eb-9eb5-0e104c68abe4.gif)<br>
+
 ### 商品削除ページ
 - 削除ボタンをクリックすると、削除完了しユーザー詳細ページへ遷移する。
-![item-delete](https://user-images.githubusercontent.com/77190650/111935877-cd47d180-8b07-11eb-94c1-30d65bda87bb.gif)
-<br>
+![item-delete](https://user-images.githubusercontent.com/77190650/111935877-cd47d180-8b07-11eb-94c1-30d65bda87bb.gif)<br>
+
 ### 商品購入ページ
 - 商品詳細ページの購入ボタンをクリックすると、購入ページへ遷移する。
-![item-order](https://user-images.githubusercontent.com/77190650/111936436-00d72b80-8b09-11eb-948c-75b75a6ae797.gif)
-<br>
+![item-order](https://user-images.githubusercontent.com/77190650/111936436-00d72b80-8b09-11eb-948c-75b75a6ae797.gif)<br>
+
 - 必須項目の入力をして購入ボタンを押すとトップページへ遷移する。購入した商品にはSold Outが表示される。
-![order-ok](https://user-images.githubusercontent.com/77190650/111936638-7b07b000-8b09-11eb-8785-fb3933ea11f3.gif)
-<br>
+![order-ok](https://user-images.githubusercontent.com/77190650/111936638-7b07b000-8b09-11eb-8785-fb3933ea11f3.gif)<br>
+
 ### ユーザー詳細ページ
 - 一般ユーザーのページにはプロフィールの他に、いいねした商品と購入済み商品が表示される。
-![ippan-detail](https://user-images.githubusercontent.com/77190650/111937180-87d8d380-8b0a-11eb-8ab0-932ab205d0ab.gif)
-<br>
+![ippan-detail](https://user-images.githubusercontent.com/77190650/111937180-87d8d380-8b0a-11eb-8ab0-932ab205d0ab.gif)<br>
+
 - 芸人ユーザーのページにはプロフィールの他に、過去の出品商品一覧が表示される。
-![talent-detail](https://user-images.githubusercontent.com/77190650/111937633-7e03a000-8b0b-11eb-98e4-d5d0cf7df8c8.png)
-<br>
+![talent-detail](https://user-images.githubusercontent.com/77190650/111937633-7e03a000-8b0b-11eb-98e4-d5d0cf7df8c8.png)<br>
+
 ### カテゴリー検索
 - 所属事務所・商品カテゴリ・金額範囲から好きな項目を絞って検索できる。
-![category-search](https://user-images.githubusercontent.com/77190650/111937987-56f99e00-8b0c-11eb-9af0-61968d73715e.gif)
-<br>
+![category-search](https://user-images.githubusercontent.com/77190650/111937987-56f99e00-8b0c-11eb-9af0-61968d73715e.gif)<br>
+
 ### いいね機能（非同期通信）
 - ログインユーザーは♡をクリックすると非同期でいいねの付け外しができる。
-![likes-button](https://user-images.githubusercontent.com/77190650/111951922-a8fbed00-8b27-11eb-9179-0eacce4bb7ec.gif)
-<br>
+![likes-button](https://user-images.githubusercontent.com/77190650/111951922-a8fbed00-8b27-11eb-9179-0eacce4bb7ec.gif)<br>
+
 
 ### 工夫したポイント
-  1. 利用方法別に、ユーザー新規登録時の内容を変更<br>
+#### 利用方法別に、ユーザー新規登録時の内容を変更
   - 芸人として利用するのであれば、所属事務所・芸歴・自己紹介<br>
   - 一般ユーザーとして利用するのであれば、自己紹介のみの入力と、ユーザーによって登録内容を変更できるようにした。<br>
   
 
-  2. ログインユーザーによって各ページの表示内容を変更。<br>
-    1. 芸人として利用する場合<br>
-      - 商品一覧ページに出品ボタンを表示した。<br>
-      ![talent-cell](https://user-images.githubusercontent.com/77190650/111932958-d897fe80-8b01-11eb-8fc6-19b486c01e84.png)
-      - ユーザー詳細ページには、出品した作品一覧を表示した。<br>
-      - ユーザー詳細ページのサイドプロフィールには所属事務所・芸歴・自己紹介文を表示した。<br>
-      - 芸人さんは作品出品のみの利用のため、他の芸人の商品は購入できないように、商品詳細ページの購入ボタンを非表示にした。<br>
-      - 自分が出品した作品のみ編集・削除できるようにした。<br>
-      - 自分が出品した作品にはいいねクリックできないよう表示変更した。<br>
+#### ログインユーザーによって各ページの表示内容を変更。
+1. 芸人として利用する場合<br>
+  - 商品一覧ページに出品ボタンを表示した。<br>
+  ![talent-cell](https://user-images.githubusercontent.com/77190650/111932958-d897fe80-8b01-11eb-8fc6-19b486c01e84.png)
+  - ユーザー詳細ページには、出品した作品一覧を表示した。<br>
+  - ユーザー詳細ページのサイドプロフィールには所属事務所・芸歴・自己紹介文を表示した。<br>
+  - 芸人さんは作品出品のみの利用のため、他の芸人の商品は購入できないように、商品詳細ページの購入ボタンを非表示にした。<br>
+  - 自分が出品した作品のみ編集・削除できるようにした。<br>
+  - 自分が出品した作品にはいいねクリックできないよう表示変更した。<br>
 
-    2. 一般ユーザーとして利用する場合<br>
-      - 一般ユーザーは作品購入のみの利用のため、商品一覧ページの出品ボタンを非表示にした。<br>
-      ![ippan-nosell](https://user-images.githubusercontent.com/77190650/111933185-49d7b180-8b02-11eb-9ab6-e15d7d2a1f0c.png)<br>
-      - ユーザー詳細ページに、いいね押した作品一覧を表示した。<br>
-      - ユーザー詳細ページのサイドプロフィールには自己紹介文と過去の購入済作品名を表示した。<br>
-      ![ippan-page](https://user-images.githubusercontent.com/77190650/111952396-71da0b80-8b28-11eb-89ec-4199189b8d59.png)<br>
+1. 一般ユーザーとして利用する場合<br>
+  - 一般ユーザーは作品購入のみの利用のため、商品一覧ページの出品ボタンを非表示にした。<br>
+  ![ippan-nosell](https://user-images.githubusercontent.com/77190650/111933185-49d7b180-8b02-11eb-9ab6-e15d7d2a1f0c.png)<br>
+  - ユーザー詳細ページに、いいね押した作品一覧を表示した。<br>
+  - ユーザー詳細ページのサイドプロフィールには自己紹介文と過去の購入済作品名を表示した。<br>
+  ![ippan-page](https://user-images.githubusercontent.com/77190650/111952396-71da0b80-8b28-11eb-89ec-4199189b8d59.png)<br>
 
-    3. 未ログインで利用する場合<br>
-      - 未ログインユーザーは作品購入できないように、商品詳細ページの購入ボタンを非表示にした。<br>
-      - 未ログインユーザーはいいねクリックできないように表示変更した。<br>
-      ![un-login](https://user-images.githubusercontent.com/77190650/111953058-6d622280-8b29-11eb-9be4-2c789f8e9d4c.png)<br>
-
-
-  3. 添付画像プレビュー機能<br>
-    -  商品出品時に添付する画像をプレビュー表示させて、画像確認をできるようにした。
-    ![preview](https://user-images.githubusercontent.com/77190650/111934333-8b695c00-8b04-11eb-9227-c74a269443ab.png)<br>
+1. 未ログインで利用する場合<br>
+  - 未ログインユーザーは作品購入できないように、商品詳細ページの購入ボタンを非表示にした。<br>
+  - 未ログインユーザーはいいねクリックできないように表示変更した。<br>
+  ![un-login](https://user-images.githubusercontent.com/77190650/111953058-6d622280-8b29-11eb-9be4-2c789f8e9d4c.png)<br>
 
 
-  4. いいね機能追加<br>
-    - 気に入った作品はいいねをすることができ、一般ユーザーであればいいねした作品をユーザー詳細ページでみることができる。<br>
-    -  芸人さんは、ユーザー詳細ページで出品商品についたいいね数を確認することができる。<br>
-    -  非同期通信を使い、ページ遷移せずにいいねの付け外しをできるようにした。<br>
+#### 添付画像プレビュー機能
+  - 商品出品時に添付する画像をプレビュー表示させて、画像確認をできるようにした。<br>
+  ![preview](https://user-images.githubusercontent.com/77190650/111934333-8b695c00-8b04-11eb-9227-c74a269443ab.png)<br>
 
 
-  5. カテゴリー検索機能追加<br>
-    - 芸人さんの名前・所属事務所・カテゴリー・金額の範囲をそれぞれ指定して検索できるようにした。<br>
+#### いいね機能追加
+  - 気に入った作品はいいねをすることができ、一般ユーザーであればいいねした作品をユーザー詳細ページでみることができる。<br>
+  -  芸人さんは、ユーザー詳細ページで出品商品についたいいね数を確認することができる。<br>
+  -  非同期通信を使い、ページ遷移せずにいいねの付け外しをできるようにした。<br>
 
 
-  6. レスポンシブデザイン<br>
-    - スマホでも手軽に利用してもらうために、スマホのサイズにレスポンシブ化した。<br>
-    - また利用する時のことを考え、出品ボタンや購入ボタンを画面の右側に配置した。<br>
+#### カテゴリー検索機能追加
+  - 芸人さんの名前・所属事務所・カテゴリー・金額の範囲をそれぞれ指定して検索できるようにした。<br>
+
+
+#### レスポンシブデザイン
+  - スマホでも手軽に利用してもらうために、スマホのサイズにレスポンシブ化した。<br>
+  - また利用する時のことを考え、出品ボタンや購入ボタンを画面の右側に配置した。<br>
 
 
 ## 使用技術(開発環境)
