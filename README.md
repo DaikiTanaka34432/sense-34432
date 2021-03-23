@@ -160,22 +160,22 @@
 
 ### 商品詳細ページ
 - 商品をクリックすると詳細ページへ遷移し、商品の詳細情報を確認できる。
-![item-detail](https://user-images.githubusercontent.com/77190650/111935448-dc7a4f80-8b06-11eb-8082-0f14be1a9de7.gif)<br>
+![item-detail](https://user-images.githubusercontent.com/77190650/112079859-3d1b9200-8bc4-11eb-807f-2f58ba60b3f0.gif)<br>
 
 ### 商品編集ページ
 - 編集ボタンをクリックすると編集ページへ遷移する。編集内容を更新すると、詳細ページへ遷移する。
-![item-edit](https://user-images.githubusercontent.com/77190650/111935695-5d394b80-8b07-11eb-9eb5-0e104c68abe4.gif)<br>
+![item-edit](https://user-images.githubusercontent.com/77190650/112080643-b667b480-8bc5-11eb-983d-09da05298217.gif)<br>
 
 ### 商品削除ページ
 - 削除ボタンをクリックすると、削除完了しユーザー詳細ページへ遷移する。
-![item-delete](https://user-images.githubusercontent.com/77190650/111935877-cd47d180-8b07-11eb-94c1-30d65bda87bb.gif)<br>
+![item-delete](https://user-images.githubusercontent.com/77190650/112080849-05154e80-8bc6-11eb-9afb-a0f4ccd45366.gif)<br>
 
 ### 商品購入ページ
 - 商品詳細ページの購入ボタンをクリックすると、購入ページへ遷移する。
-![item-order](https://user-images.githubusercontent.com/77190650/111936436-00d72b80-8b09-11eb-948c-75b75a6ae797.gif)<br>
+![item-order](https://user-images.githubusercontent.com/77190650/112081085-6fc68a00-8bc6-11eb-8474-a5ac59604143.gif)<br>
 
 - 必須項目の入力をして購入ボタンを押すとトップページへ遷移する。購入した商品にはSold Outが表示される。
-![order-ok](https://user-images.githubusercontent.com/77190650/111936638-7b07b000-8b09-11eb-8785-fb3933ea11f3.gif)<br>
+![order-ok](https://user-images.githubusercontent.com/77190650/112081304-cb911300-8bc6-11eb-84c0-873cf8b3773d.gif)<br>
 
 ### ユーザー詳細ページ
 - 一般ユーザーのページにはプロフィールの他に、いいねした商品と購入済み商品が表示される。
@@ -186,11 +186,11 @@
 
 ### カテゴリー検索
 - 所属事務所・商品カテゴリ・金額範囲から好きな項目を絞って検索できる。
-![category-search](https://user-images.githubusercontent.com/77190650/111937987-56f99e00-8b0c-11eb-9af0-61968d73715e.gif)<br>
+![category-search](https://user-images.githubusercontent.com/77190650/112081590-3b070280-8bc7-11eb-8699-53e228a25054.gif)<br>
 
 ### いいね機能（非同期通信）
 - ログインユーザーは♡をクリックすると非同期でいいねの付け外しができる。
-![likes-button](https://user-images.githubusercontent.com/77190650/111951922-a8fbed00-8b27-11eb-9179-0eacce4bb7ec.gif)<br>
+![likes-button](https://user-images.githubusercontent.com/77190650/112081862-b5378700-8bc7-11eb-861d-ec2b52dd380f.gif)<br>
 
 
 ## 工夫したポイント
@@ -240,7 +240,7 @@
 ### レスポンシブデザイン
   - スマホでも手軽に利用してもらうために、スマホのサイズにレスポンシブ化した。<br>
   - また利用する時のことを考え、出品ボタンや購入ボタンを画面の右側に配置した。<br>
-  ![responsive](https://user-images.githubusercontent.com/77190650/111973544-f1c09f80-8b41-11eb-84fc-fa2494b020a8.gif)<br>
+  ![responsive](https://user-images.githubusercontent.com/77190650/112082057-08a9d500-8bc8-11eb-8ab7-373db50bc156.gif)<br>
 
 
 ## 使用技術(開発環境)
