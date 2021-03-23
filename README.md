@@ -156,7 +156,7 @@
 
 ### 商品出品ページ
 - 必須項目を入力し出品ボタンを押すとトップページに遷移し、商品が一覧ページに追加される。
-![item-sell](https://user-images.githubusercontent.com/77190650/111935171-3fb7b200-8b06-11eb-87d9-b6623d28d154.gif)<br>
+![item-sell](https://user-images.githubusercontent.com/77190650/112076300-89170880-8bbd-11eb-9ca0-8c688942bb81.gif)<br>
 
 ### 商品詳細ページ
 - 商品をクリックすると詳細ページへ遷移し、商品の詳細情報を確認できる。
